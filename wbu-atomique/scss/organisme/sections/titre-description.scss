@@ -1,0 +1,51 @@
+@use "../../wbu-ressources.scss" as *;
+//@use "../../atome/typography/h2.scss";
+
+.titre-description {
+  .title {
+    margin-bottom: $wbu-margin * 1.2;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    @include traitBottom($wbu-margin, $wbu-color-primary, $wbu-width: 80px);
+  }
+  .description {
+    font-size: $wbu-default-font-size * 1.2;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.text-left,
+  &.text-justify {
+    .title {
+      &::after {
+        margin-left: 0;
+      }
+    }
+  }
+  &.bar-left {
+    padding-left: $space_inner_top;
+    position: relative;
+    &::after {
+      content: "";
+      width: 3px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: auto;
+      position: absolute;
+      background-color: $wbu-color-primary;
+    }
+    .description {
+      max-width: 100%;
+    }
+    .title {
+      max-width: 100%;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

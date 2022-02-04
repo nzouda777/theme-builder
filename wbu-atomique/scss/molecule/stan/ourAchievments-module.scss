@@ -1,0 +1,93 @@
+//@use "../../wbu-ressources.scss" as *;
+@use "../../variables" as *;
+@use "../../atome/stan/btn-radius.scss";
+@use "../../atome/typography/default";
+
+.ourAchievments-module {
+  margin: 0 auto $wbu-margin * 3.5;
+  width: 100%;
+
+  &__image {
+    margin-top: 50px;
+    background-position: 50%;
+    background-size: cover;
+    margin: 0 5px 18px;
+  }
+  .description {
+    position: absolute;
+    top: auto;
+    bottom: $wbu-margin;
+    left: auto;
+    right: 0;
+    text-shadow: 0 0 #282828;
+    max-width: calc(50% - 20px);
+  }
+
+  &__container {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    transition: ease-in-out 0.2s;
+    &:hover::before {
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: "";
+      height: 150px;
+      display: block;
+      background: linear-gradient(
+        180deg,
+        rgb(252 252 252 / 3%) 0%,
+        rgb(244 246 247 / 85%) 100%
+      );
+    }
+    .showProject {
+      visibility: hidden;
+    }
+
+    ul {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      max-width: calc(45% - 20px);
+      button {
+        font-size: $wbu-default-font-size * 0.85;
+      }
+    }
+
+    &:hover {
+      background: hsla(0, 0%, 100%, 0.5);
+      .showProject {
+        position: absolute;
+        width: 180px;
+        height: 44px;
+        top: calc(50% - 22px);
+        left: calc(50% - 90px);
+        background-color: #000;
+        color: #fff;
+        font-weight: 700;
+        font-size: $wbu-default-font-size * 0.9;
+        line-height: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: visible;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: $wbu-default-font-size * 1.8;
+    line-height: 28px;
+    color: #1b1918;
+    margin-left: $wbu-margin * 0.5;
+    margin-right: $wbu-margin * 0.5;
+  }
+}

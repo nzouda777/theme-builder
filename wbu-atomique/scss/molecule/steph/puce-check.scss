@@ -1,0 +1,21 @@
+@use "../../wbu-ressources.scss" as *;
+
+ul.puce-check {
+  padding-left: 0;
+  li {
+    position: relative;
+    padding-left: 4rem;
+    margin-bottom: 1rem;
+    list-style: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: $wbu_dimension_puce;
+      height: $wbu_dimension_puce;
+      top: 0;
+      left: 0;
+      @include wbu__svg-puce-check($wbu-color-primary, $wbu_dimension_puce);
+    }
+  }
+}

@@ -1,0 +1,68 @@
+//@use "../../wbu-ressources.scss" as *;
+@use '../../variables' as *;
+@use '../../defaut/model/custom_bp.scss' as *;
+@use "../../atome/typography/default";
+@use './paragraphList.scss';
+
+.serviceBlock-module {
+  flex-basis: calc(50% - 15px);
+  margin    : 0 auto $wbu-margin * 2.5;
+  width     : 100%;
+
+  &__container {
+    background     : linear-gradient(36.64deg, #007891 14.08%, #49a0a2);
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+  }
+
+  &__serviceMessage {
+    background-color: #fff;
+    margin          : $wbu-margin * 2 $wbu-margin * 2.5 $wbu-margin * 3;
+    padding         : $wbu-margin $wbu-margin $wbu-margin * 3;
+    position        : relative;
+    text-align      : center;
+    color           : #1b1918;
+    @include media-max(MD) {
+      margin: $wbu-margin * 2 $wbu-margin * 1.5 $wbu-margin * 3;
+    }
+  }
+
+  &__serviceTitle {
+    line-height  : $wbu-default-line-height * 0.85;
+    margin-bottom: $wbu-margin*2;
+  }
+
+  &__serviceDescription {
+    font-weight: 400;
+  }
+
+  &__button {
+    text-decoration: none;
+    color          : #fff;
+    background     : #1b1918;
+    border-radius  : 2px;
+    font-style     : normal;
+    font-weight    : 700;
+    font-size      : 1.54rem;
+    line-height    : 24px;
+    padding        : 10px 20px;
+    bottom         : 0;
+    transform      : translateY(18%);
+    display        : inline-block;
+
+    a {
+      color: #FFF;
+    }
+
+    i {
+      font-size  : $wbu-default-font-size;
+      font-weight: 200;
+      margin-left: 10px;
+    }
+    @include media-max(MD) {
+      margin-top: 10px;
+      position  : relative;
+    }
+  }
+}

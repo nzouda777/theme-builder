@@ -1,0 +1,7 @@
+@use "../wbu-ressources.scss" as *;
+@use '../atome/current_price.scss';
+@use '../atome/old_price.scss';
+
+.price_box {
+  margin-bottom: $wbu-margin;
+}
